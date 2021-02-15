@@ -4,9 +4,9 @@
   "author": "Powelectrics",
   "summary": "Installs, configures, and manages the NTP service.",
   "license": "proprietary",
-  "source": "https://github.com/powelectrics/puppet-firewall-framework",
-  "project_page": "https://github.com/powelectrics/puppet-firewall-framework",
-  "issues_url": "https://github.com/powelectrics/puppet-firewall-framework/issues",
+  "source": "https://github.com/powelectrics/puppet-firewall_framework",
+  "project_page": "https://github.com/powelectrics/puppet-firewall_framework",
+  "issues_url": "https://github.com/powelectrics/puppet-firewall_framework/issues",
   "dependencies": [
     {
       "name": "puppetlabs/firewall",
