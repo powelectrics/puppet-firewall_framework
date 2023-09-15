@@ -1,6 +1,6 @@
 {
   "name": "powelectrics-firewall_framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "PowTechnology Limited",
   "summary": "Adds pre- and post- rules to implement the chains described in puppet-firewall",
   "license": "proprietary",
