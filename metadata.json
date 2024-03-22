@@ -4,9 +4,9 @@
   "author": "PowTechnology Limited",
   "summary": "Adds pre- and post- rules to implement the chains described in puppet-firewall",
   "license": "proprietary",
-  "source": "https://github.com/powelectrics/puppet-firewall_framework",
-  "project_page": "https://github.com/powelectrics/puppet-firewall_framework",
-  "issues_url": "https://github.com/powelectrics/puppet-firewall_framework/issues",
+  "source": "https://github.com/powtechnology/puppet-firewall_framework",
+  "project_page": "https://github.com/powtechnology/puppet-firewall_framework",
+  "issues_url": "https://github.com/powtechnology/puppet-firewall_framework/issues",
   "dependencies": [
     {
       "name": "puppetlabs/firewall",
