@@ -10,6 +10,8 @@ class firewall_framework::pre (
   Firewall {
     require => undef,
   }
+  # TODO: -A INPUT -p icmp --icmp-type timestamp-request -m comment --comment "ICMP timestamp requests are a mild security vul" -j DROP
+  # TODO: -A INPUT -p icmp --icmp-type address-mask-request -m comment --comment "ICMP netmask requests are a mild security vul" -j DROP
   firewall { '000 accept all icmp (powelectrics/firewall_framework)':
     proto  => 'icmp',
     action => 'accept',
