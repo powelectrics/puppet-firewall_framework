@@ -1,6 +1,12 @@
-# Configuration applied at the start of firewall update, before any other rules.
+# @summary Configuration applied at the start of firewall update, before any other rules.
+#
+# @param default_reject_output If true, add a rule that accepts established/related as the first entry on the output chain
+#   in preparation for a reject-all at the end.
+#
 # From https://puppet.com/docs/puppet/7.4/quick_start_firewall.html
-class firewall_framework::pre {
+class firewall_framework::pre (
+  Boolean $default_reject_output = false,
+) {
   Firewall {
     require => undef,
   }
@@ -23,5 +29,14 @@ class firewall_framework::pre {
     proto  => 'all',
     state  => ['RELATED', 'ESTABLISHED'],
     action => 'accept',
+  }
+
+  if $default_reject_output {
+    firewall { '003 accept related established rules (powelectrics/firewall_framework)':
+      chain  => 'OUTPUT',
+      proto  => 'all',
+      state  => ['RELATED', 'ESTABLISHED'],
+      action => 'accept',
+    }
   }
 }
