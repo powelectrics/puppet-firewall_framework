@@ -1,6 +1,6 @@
 {
   "name": "powelectrics-firewall_framework",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "PowTechnology Limited",
   "summary": "Adds pre- and post- rules to implement the chains described in puppet-firewall",
   "license": "proprietary",
@@ -15,52 +15,8 @@
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7",
-        "8",
-        "9"
-      ]
-    },
-    {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "11 SP1",
-        "12",
-        "15"
-      ]
-    },
-    {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "8",
-        "9",
-        "10",
         "11",
         "12"
       ]
@@ -68,9 +24,6 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "14.04",
-        "16.04",
-        "18.04",
         "20.04",
         "22.04"
       ]
@@ -79,7 +32,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.5.0 < 9.0.0"
+      "version_requirement": ">= 5.5.0 < 9.0.0"
     }
   ]
 }
