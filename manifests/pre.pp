@@ -22,7 +22,7 @@ class firewall_framework::pre (
   firewall { '002 reject local traffic not on loopback interface (powelectrics/firewall_framework)':
     iniface     => '! lo',
     proto       => 'all',
-    destination => '127.0.0.1/8',
+    destination => '127.0.0.0/8',
     action      => 'reject',
   }
   firewall { '003 accept related established rules (powelectrics/firewall_framework)':
