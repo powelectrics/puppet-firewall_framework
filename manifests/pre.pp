@@ -14,7 +14,7 @@ class firewall_framework::pre (
     proto  => 'icmp',
     action => 'accept',
   }
-  firewall { '001 accept all to lo interface (powelectrics/firewall_framework)':
+  firewall { '001 accept all from loopback interface (powelectrics/firewall_framework)':
     proto   => 'all',
     iniface => 'lo',
     action  => 'accept',
@@ -32,6 +32,17 @@ class firewall_framework::pre (
   }
 
   if $default_reject_output {
+    firewall { '000 accept all icmp (powelectrics/firewall_framework)':
+      chain  => 'OUTPUT',
+      proto  => 'icmp',
+      action => 'accept',
+    }
+    firewall { '001 accept all to loopback interface (powelectrics/firewall_framework)':
+      chain   => 'OUTPUT',
+      proto   => 'all',
+      iniface => 'lo',
+      action  => 'accept',
+    }
     firewall { '003 accept related established rules (powelectrics/firewall_framework)':
       chain  => 'OUTPUT',
       proto  => 'all',
